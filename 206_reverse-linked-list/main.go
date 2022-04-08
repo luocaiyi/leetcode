@@ -1,26 +1,8 @@
 package _reverse_linked_list
 
-import "fmt"
+import datastruct "github.com/luocaiyi/leetcode/datastruct"
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-// Print 打印链表
-func (head *ListNode) Print() {
-	cur := head
-	format := "["
-	for nil != cur {
-		format += fmt.Sprintf("%d", cur.Val)
-		cur = cur.Next
-		if nil != cur {
-			format += ","
-		}
-	}
-	format += "]"
-	fmt.Println(format)
-}
+type ListNode = datastruct.ListNode
 
 /**
  * Definition for singly-linked list.
