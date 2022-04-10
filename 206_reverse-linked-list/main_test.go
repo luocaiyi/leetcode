@@ -14,6 +14,6 @@ func init() {
 
 func TestReverseList(t *testing.T) {
 	head.Print()
-	head = ReverseList(head)
+	head = reverseList(head)
 	head.Print()
 }

@@ -11,7 +11,7 @@ type ListNode = datastruct.ListNode
  *     Next *ListNode
  * }
  */
-func ReverseList(head *ListNode) *ListNode {
+func reverseList(head *ListNode) *ListNode {
 	if nil == head || nil == head.Next {
 		return head
 	}
