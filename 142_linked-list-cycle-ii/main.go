@@ -1,4 +1,4 @@
-package _linked_list_cycle
+package _42_linked_list_cycle_ii
 
 import "github.com/luocaiyi/leetcode/datastruct"
 
@@ -12,27 +12,32 @@ type ListNode = datastruct.ListNode
  * }
  */
 // 快慢指针
-func hasCycle(head *ListNode) bool {
+func detectCycle(head *ListNode) *ListNode {
 	fast, slow := head, head
-	for nil != fast && nil != slow && nil != fast.Next {
+	for nil != fast && nil != fast.Next {
 		slow = slow.Next
 		fast = fast.Next.Next
-		if slow == fast {
-			return true
+		if fast == slow {
+			p := head
+			for p != slow {
+				p = p.Next
+				slow = slow.Next
+			}
+			return p
 		}
 	}
-	return false
+	return nil
 }
 
 // map
-//func hasCycle(head *ListNode) bool {
+//func detectCycle(head *ListNode) *ListNode {
 //	seen := map[*ListNode]struct{}{}
 //	for nil != head {
 //		if _, ok := seen[head]; ok {
-//			return true
+//			return head
 //		}
 //		seen[head] = struct{}{}
 //		head = head.Next
 //	}
-//	return false
+//	return nil
 //}

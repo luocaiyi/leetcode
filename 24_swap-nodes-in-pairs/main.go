@@ -1,6 +1,6 @@
 package _swap_nodes_in_pairs
 
-import datastruct "github.com/luocaiyi/leetcode/datastruct"
+import "github.com/luocaiyi/leetcode/datastruct"
 
 type ListNode = datastruct.ListNode
 

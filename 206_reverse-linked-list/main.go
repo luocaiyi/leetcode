@@ -1,6 +1,6 @@
 package _reverse_linked_list
 
-import datastruct "github.com/luocaiyi/leetcode/datastruct"
+import "github.com/luocaiyi/leetcode/datastruct"
 
 type ListNode = datastruct.ListNode
 
